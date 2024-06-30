@@ -4174,7 +4174,7 @@ a {
 
 .personal-porfolio-parent {
     height: 85vh;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("way/style4.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("way/style4.webp");
     background-position: 0 0, 50% 40%;
     background-size: auto, cover;
     background-attachment: scroll, scroll;
