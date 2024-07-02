@@ -5290,7 +5290,7 @@
             e.bodymovin = e.lottie);
         }(window || {}, function(window) {
             "use strict";
-            var svgNS = "http://www.w3.org/2000/svg", locationHref = "", initialDefaultFrame = -999999, subframeEnabled = !0, idPrefix = "", expressionsPlugin, isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent), cachedColors = {}, bmRnd, bmPow = Math.pow, bmSqrt = Math.sqrt, bmFloor = Math.floor, bmMax = Math.max, bmMin = Math.min, BMMath = {};
+            var svgNS = "https://www.w3.org/2000/svg", locationHref = "", initialDefaultFrame = -999999, subframeEnabled = !0, idPrefix = "", expressionsPlugin, isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent), cachedColors = {}, bmRnd, bmPow = Math.pow, bmSqrt = Math.sqrt, bmFloor = Math.floor, bmMax = Math.max, bmMin = Math.min, BMMath = {};
             function ProjectInterface() {
                 return {};
             }
@@ -7294,7 +7294,7 @@
                         isSafari ? this.testImageLoaded(s) : s.addEventListener("load", this._imageLoaded, !1), 
                         s.addEventListener("error", function() {
                             c.img = e, this._imageLoaded();
-                        }.bind(this), !1), s.setAttributeNS("http://www.w3.org/1999/xlink", "href", o), 
+                        }.bind(this), !1), s.setAttributeNS("https://www.w3.org/1999/xlink", "href", o), 
                         this._elementHelper.append ? this._elementHelper.append(s) : this._elementHelper.appendChild(s);
                         var c = {
                             img: s,
@@ -8122,7 +8122,7 @@
             }, SVGRenderer.prototype.createSolid = function(e) {
                 return new ISolidElement(e, this.globalData, this);
             }, SVGRenderer.prototype.configAnimation = function(e) {
-                this.svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg"), 
+                this.svgElement.setAttribute("xmlns", "https://www.w3.org/2000/svg"), 
                 this.renderConfig.viewBoxSize ? this.svgElement.setAttribute("viewBox", this.renderConfig.viewBoxSize) : this.svgElement.setAttribute("viewBox", "0 0 " + e.w + " " + e.h), 
                 this.renderConfig.viewBoxOnly || (this.svgElement.setAttribute("width", e.w), 
                 this.svgElement.setAttribute("height", e.h), this.svgElement.style.width = "100%", 
@@ -9135,7 +9135,7 @@
                 this.innerElem = createNS("image"), this.innerElem.setAttribute("width", this.assetData.w + "px"), 
                 this.innerElem.setAttribute("height", this.assetData.h + "px"), 
                 this.innerElem.setAttribute("preserveAspectRatio", this.assetData.pr || this.globalData.renderConfig.imagePreserveAspectRatio), 
-                this.innerElem.setAttributeNS("http://www.w3.org/1999/xlink", "href", e), 
+                this.innerElem.setAttributeNS("https://www.w3.org/1999/xlink", "href", e), 
                 this.layerElement.appendChild(this.innerElem);
             }, IImageElement.prototype.sourceRectAtTime = function() {
                 return this.sourceRect;
@@ -9209,7 +9209,7 @@
                     f += r.yOffset, f += E ? 1 : 0, E = !1), this.applyTextPropertiesToMatrix(r, d, s[e].line, m, f), 
                     m += s[e].l || 0, m += p), c ? (u = (_ = (y = this.globalData.fontManager.getCharData(r.finalText[e], n.fStyle, this.globalData.fontManager.getFontByName(r.f).fFamily)) && y.data || {}).shapes ? _.shapes[0].it : [], 
                     v ? l += this.createPathShape(d, u) : o.setAttribute("d", this.createPathShape(d, u))) : (v && o.setAttribute("transform", "translate(" + d.props[12] + "," + d.props[13] + ")"), 
-                    o.textContent = s[e].val, o.setAttributeNS("http://www.w3.org/XML/1998/namespace", "xml:space", "preserve"));
+                    o.textContent = s[e].val, o.setAttributeNS("https://www.w3.org/XML/1998/namespace", "xml:space", "preserve"));
                     v && o && o.setAttribute("d", l);
                 } else {
                     var D = this.textContainer, z = "start";
@@ -10115,7 +10115,7 @@
                             } else d.setAttribute("width", 1), d.setAttribute("height", 1);
                             u.appendChild(d);
                         }
-                    } else if (c.textContent = l[n].val, c.setAttributeNS("http://www.w3.org/XML/1998/namespace", "xml:space", "preserve"), 
+                    } else if (c.textContent = l[n].val, c.setAttributeNS("https://www.w3.org/XML/1998/namespace", "xml:space", "preserve"), 
                     this.isMasked) this.innerElem.appendChild(c); else {
                         this.innerElem.appendChild(u);
                         var z = c.style, w = "translate3d(0," + -e.finalSize / 1.2 + "px,0)";
@@ -10165,7 +10165,7 @@
                 var e = this.globalData.getAssetsPath(this.assetData), t = new Image();
                 this.data.hasMask ? (this.imageElem = createNS("image"), this.imageElem.setAttribute("width", this.assetData.w + "px"), 
                 this.imageElem.setAttribute("height", this.assetData.h + "px"), 
-                this.imageElem.setAttributeNS("http://www.w3.org/1999/xlink", "href", e), 
+                this.imageElem.setAttributeNS("https://www.w3.org/1999/xlink", "href", e), 
                 this.layerElement.appendChild(this.imageElem), this.baseElement.setAttribute("width", this.assetData.w), 
                 this.baseElement.setAttribute("height", this.assetData.h)) : this.layerElement.appendChild(t), 
                 t.crossOrigin = "anonymous", t.src = e, this.data.ln && this.baseElement.setAttribute("id", this.data.ln);
@@ -18813,7 +18813,7 @@
                 return le;
             }
             function Q(Z) {
-                if (Z.kind !== "Document") throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql');
+                if (Z.kind !== "Document") throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? https://docs.apollostack.com/apollo-client/core.html#gql');
                 var le = Z.definitions.filter(function(N) {
                     return N.kind !== "FragmentDefinition";
                 }).map(function(N) {
@@ -18850,7 +18850,7 @@
                 return le;
             }
             function be(Z) {
-                if (Z.kind !== "Document") throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql');
+                if (Z.kind !== "Document") throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? https://docs.apollostack.com/apollo-client/core.html#gql');
                 if (Z.definitions.length > 1) throw new Error("Fragment must have exactly one definition.");
                 var le = Z.definitions[0];
                 if (le.kind !== "FragmentDefinition") throw new Error("Must be a fragment definition.");
@@ -21417,7 +21417,7 @@
             }, a = {
                 method: "POST"
             }, o = {
-                http: n,
+                https: n,
                 headers: i,
                 options: a
             }, s = function(f, E, p) {
@@ -21449,7 +21449,7 @@
     
     For example:
     import fetch from '` + E + `';
-    import { createHttpLink } from 'apollo-link-http';
+    import { createHttpLink } from 'apollo-link-https';
     
     const link = createHttpLink({ uri: '/graphql', fetch: fetch });`);
                 }
@@ -21468,11 +21468,11 @@
                 var y = r({}, E.options, {
                     headers: E.headers,
                     credentials: E.credentials
-                }), A = E.http;
+                }), A = E.https;
                 p.forEach(function(J) {
                     y = r({}, y, J.options, {
                         headers: r({}, y.headers, J.headers)
-                    }), J.credentials && (y.credentials = J.credentials), A = r({}, A, J.http);
+                    }), J.credentials && (y.credentials = J.credentials), A = r({}, A, J.https);
                 });
                 var D = f.operationName, z = f.extensions, w = f.variables, V = f.query, W = {
                     operationName: D,
@@ -21634,7 +21634,7 @@
     });
     var NW = M((lp, IW) => {
         (function(e, t) {
-            typeof lp == "object" && typeof IW < "u" ? t(lp, qs(), SW(), CW()) : typeof define == "function" && define.amd ? define([ "exports", "apollo-link", "apollo-link-http-common", "apollo-link-batch" ], t) : t((e.apolloLink = e.apolloLink || {}, 
+            typeof lp == "object" && typeof IW < "u" ? t(lp, qs(), SW(), CW()) : typeof define == "function" && define.amd ? define([ "exports", "apollo-link", "apollo-link-https-common", "apollo-link-batch" ], t) : t((e.apolloLink = e.apolloLink || {}, 
             e.apolloLink.batchHttp = {}), e.apolloLink.core, e.apolloLink.httpCommon, e.apolloLink.batch);
         })(lp, function(e, t, r, n) {
             "use strict";
@@ -21666,7 +21666,7 @@
                     var d = s.call(this) || this, l = u.uri, v = l === void 0 ? "/graphql" : l, m = u.fetch, f = u.includeExtensions, E = u.batchInterval, p = u.batchMax, _ = u.batchKey, y = a(u, [ "uri", "fetch", "includeExtensions", "batchInterval", "batchMax", "batchKey" ]);
                     r.checkFetcher(m), m || (m = fetch);
                     var A = {
-                        http: {
+                        https: {
                             includeExtensions: f
                         },
                         options: y.fetchOptions,
@@ -21676,7 +21676,7 @@
                     d.batchInterval = E || 10, d.batchMax = p || 10;
                     var D = function(z) {
                         var w = r.selectURI(z[0], v), V = z[0].getContext(), W = {
-                            http: V.http,
+                            https: V.https,
                             options: V.fetchOptions,
                             credentials: V.credentials,
                             headers: V.headers
@@ -21686,7 +21686,7 @@
                             var b = T.body;
                             return b;
                         }), ae = J[0].options;
-                        if (ae.method === "GET") return t.fromError(new Error("apollo-link-batch-http does not support GET requests"));
+                        if (ae.method === "GET") return t.fromError(new Error("apollo-link-batch-https does not support GET requests"));
                         try {
                             ae.body = r.serializeFetchParameter(se, "Payload");
                         } catch (T) {
@@ -21710,7 +21710,7 @@
                     };
                     return _ = _ || function(z) {
                         var w = z.getContext(), V = {
-                            http: w.http,
+                            https: w.https,
                             options: w.fetchOptions,
                             credentials: w.credentials,
                             headers: w.headers
@@ -22007,7 +22007,7 @@
                 return H;
             }
             function Q(N) {
-                if (N.kind !== "Document") throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql');
+                if (N.kind !== "Document") throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? https://docs.apollostack.com/apollo-client/core.html#gql');
                 var H = N.definitions.filter(function(ie) {
                     return ie.kind !== "FragmentDefinition";
                 }).map(function(ie) {
@@ -22044,7 +22044,7 @@
                 return H;
             }
             function be(N) {
-                if (N.kind !== "Document") throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql');
+                if (N.kind !== "Document") throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? https://docs.apollostack.com/apollo-client/core.html#gql');
                 if (N.definitions.length > 1) throw new Error("Fragment must have exactly one definition.");
                 var H = N.definitions[0];
                 if (H.kind !== "FragmentDefinition") throw new Error("Must be a fragment definition.");
@@ -32416,7 +32416,7 @@
                         var z = D.name.value, w = a(D.loc);
                         i.hasOwnProperty(z) && !i[z][w] ? (s && console.warn("Warning: fragment with name " + z + ` already exists.
     graphql-tag enforces all fragment names across your application to be unique; read more about
-    this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names`), 
+    this in the docs: https://dev.apollodata.com/core/fragments.html#unique-names`), 
                         i[z][w] = !0) : i.hasOwnProperty(z) || (i[z] = {}, i[z][w] = !0), 
                         _[w] || (_[w] = !0, y.push(D));
                     } else y.push(D);
@@ -34934,7 +34934,7 @@
             function Sm(h, g) {
                 if (g !== null) {
                     var C, q = s2;
-                    if (g.abbr = h, nr[h] != null) ne("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), 
+                    if (g.abbr = h, nr[h] != null) ne("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See https://momentjs.com/guides/#/warnings/define-locale/ for more info."), 
                     q = nr[h]._config; else if (g.parentLocale != null) if (nr[g.parentLocale] != null) q = nr[g.parentLocale]._config; else if (C = hl(g.parentLocale), 
                     C != null) q = C._config; else return x1[g.parentLocale] || (x1[g.parentLocale] = []), 
                     x1[g.parentLocale].push({
@@ -35099,7 +35099,7 @@
                 if (l2(h), h._isValid === !1) delete h._isValid; else return;
                 t.createFromInputFallback(h);
             }
-            t.createFromInputFallback = ae("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", function(h) {
+            t.createFromInputFallback = ae("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to https://momentjs.com/guides/#/warnings/js-date/ for more info.", function(h) {
                 h._d = new Date(h._i + (h._useUTC ? " UTC" : ""));
             }), t.ISO_8601 = function() {}, t.RFC_2822 = function() {};
             function Nm(h) {
@@ -35174,10 +35174,10 @@
             function xt(h, g, C, q) {
                 return d2(h, g, C, q, !1);
             }
-            var cee = ae("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
+            var cee = ae("moment().min is deprecated, use moment.max instead. https://momentjs.com/guides/#/warnings/min-max/", function() {
                 var h = xt.apply(null, arguments);
                 return this.isValid() && h.isValid() ? h < this ? this : h : _();
-            }), uee = ae("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
+            }), uee = ae("moment().max is deprecated, use moment.min instead. https://momentjs.com/guides/#/warnings/min-max/", function() {
                 var h = xt.apply(null, arguments);
                 return this.isValid() && h.isValid() ? h > this ? this : h : _();
             });
@@ -35356,7 +35356,7 @@
             function E2(h, g) {
                 return function(C, q) {
                     var j, pe;
-                    return q !== null && !isNaN(+q) && (ne(g, "moment()." + g + "(period, number) is deprecated. Please use moment()." + g + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), 
+                    return q !== null && !isNaN(+q) && (ne(g, "moment()." + g + "(period, number) is deprecated. Please use moment()." + g + "(number, period). See https://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), 
                     pe = C, C = q, q = pe), C = typeof C == "string" ? +C : C, j = qn(C, q), 
                     _2(this, j, h), this;
                 };
@@ -35702,8 +35702,8 @@
             ze.dates = ae("dates accessor is deprecated. Use date instead.", b2), 
             ze.months = ae("months accessor is deprecated. Use month instead", t2), 
             ze.years = ae("years accessor is deprecated. Use year instead", QT), 
-            ze.zone = ae("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", _ee), 
-            ze.isDSTShifted = ae("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", Tee);
+            ze.zone = ae("moment().zone is deprecated, use moment().utcOffset instead. https://momentjs.com/guides/#/warnings/zone/", _ee), 
+            ze.isDSTShifted = ae("isDSTShifted is deprecated. See https://momentjs.com/guides/#/warnings/dst-shifted/ for more information", Tee);
             function yte(h) {
                 return xt(h * 1e3);
             }
@@ -36155,7 +36155,7 @@
             }, be.tz = function(re, P) {
                 if (re) {
                     if (typeof re != "string") throw new Error("Time zone name must be a string, got " + re + " [" + typeof re + "]");
-                    return this._z = ee(re), this._z ? e.updateOffset(this, P) : fe("Moment Timezone has no data for " + re + ". See http://momentjs.com/timezone/docs/#/data-loading/."), 
+                    return this._z = ee(re), this._z ? e.updateOffset(this, P) : fe("Moment Timezone has no data for " + re + ". See https://momentjs.com/timezone/docs/#/data-loading/."), 
                     this;
                 }
                 if (this._z) return this._z.name;
@@ -38795,10 +38795,10 @@
     var $8 = M((jvt, Q8) => {
         var G$e = Dt(), Y$e = At(), H$e = ba(), j$e = Y$e("iterator");
         Q8.exports = !G$e(function() {
-            var e = new URL("b?a=1&b=2&c=3", "http://a"), t = e.searchParams, r = "";
+            var e = new URL("b?a=1&b=2&c=3", "https://a"), t = e.searchParams, r = "";
             return e.pathname = "c%20d", t.forEach(function(n, i) {
                 t.delete("b"), r += i + n;
-            }), H$e && !e.toJSON || !t.sort || e.href !== "http://a/c%20d?a=1&c=3" || t.get("c") !== "3" || String(new URLSearchParams("?a=1")) !== "a=1" || !t[j$e] || new URL("https://a@b").username !== "a" || new URLSearchParams(new URLSearchParams("a=b")).get("a") !== "b" || new URL("http://тест").host !== "xn--e1aybc" || new URL("http://a#б").hash !== "#%D0%B1" || r !== "a1c3" || new URL("http://x", void 0).host !== "x";
+            }), H$e && !e.toJSON || !t.sort || e.href !== "https://a/c%20d?a=1&c=3" || t.get("c") !== "3" || String(new URLSearchParams("?a=1")) !== "a=1" || !t[j$e] || new URL("https://a@b").username !== "a" || new URLSearchParams(new URLSearchParams("a=b")).get("a") !== "b" || new URL("https://тест").host !== "xn--e1aybc" || new URL("https://a#б").hash !== "#%D0%B1" || r !== "a1c3" || new URL("https://x", void 0).host !== "x";
         });
     });
     var M9 = M((Kvt, _9) => {
@@ -43432,7 +43432,7 @@
                 return T(r(t.createElement(te || "div")), G);
             }
             function oe(G, te) {
-                var fe = '<svg xmlns="http://www.w3.org/2000/svg" width="' + G + '" height="' + te + '"/>';
+                var fe = '<svg xmlns="https://www.w3.org/2000/svg" width="' + G + '" height="' + te + '"/>';
                 return "data:image/svg+xml;charset=utf-8," + encodeURI(fe);
             }
             return function() {
